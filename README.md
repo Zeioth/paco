@@ -1,6 +1,3 @@
-# paco
-Aliases to make the most common pacman commands more intuitive.
-
 How to use
 ---------------------
 Copy the content of .bashrc at the end of your own ~/.bashrc
