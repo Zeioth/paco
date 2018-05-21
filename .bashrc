@@ -32,6 +32,7 @@ alias paco-rm='pacman_rm'
 alias paco-rmdep='pacman_rmdep'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 
+
 # Autocomplete
 #========================================================
 # To delete autocomplete, run 'complete -r alias_name'
