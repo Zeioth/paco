@@ -13,4 +13,3 @@ Cool features
 ---------------------
 
 * All aliases support autocompletion.
-* +1 To humanity.
