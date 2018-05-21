@@ -12,5 +12,5 @@ Copy the content of .bashrc at the end of your own ~/.bashrc
 
 # Cool features
 
-* All aliases implement autocompletion.
+* All aliases support autocompletion.
 * +1 To humanity.
