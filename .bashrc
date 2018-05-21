@@ -30,7 +30,7 @@ pacman_rmdep() {
 alias paco-install='pacman_install'
 alias paco-rm='pacman_rm'
 alias paco-rmdep='pacman_rmdep'
-alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
+alias paco-rmo='sudo pacman -Rs $(pacman -Qqtd)'
 
 # Autocomplete
 #========================================================
