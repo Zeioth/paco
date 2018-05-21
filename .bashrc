@@ -1,5 +1,13 @@
 # Custom methods
 #========================================================
+pacman_install() {
+  # For each parameter passed, install the package and all its dependencies.
+  for var in "$@"
+  do
+    sudo pacman -S "$var"
+  done
+}
+
 pacman_rm() {
   # For each parameter passed, remove the package and all its dependencies.
   for var in "$@"
@@ -19,10 +27,10 @@ pacman_rmdep() {
 
 # Custom aliases
 #========================================================
-alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
+alias paco-install='pacman_install'
 alias paco-rm='pacman_rm'
 alias paco-rmdep='pacman_rmdep'
-
+alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 
 # Autocomplete
 #========================================================
