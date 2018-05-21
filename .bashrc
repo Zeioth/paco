@@ -16,11 +16,13 @@ pacman_rmdep() {
   done
 }
 
+
 # Custom aliases
 #========================================================
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-rm='pacman_rm'
 alias paco-rmdep='pacman_rmdep'
+
 
 # Autocomplete
 #========================================================
