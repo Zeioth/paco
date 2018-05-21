@@ -1,7 +1,7 @@
 # Custom methods
 #========================================================
 pacman_rm() {
-  # For each parameter passed, remove the package and all its dependencies.
+  # For each parameter passed, remove the package and all its dependencies, keeping the configuration files.
   for var in "$@"
   do
     sudo pacman -Rs "$var"
