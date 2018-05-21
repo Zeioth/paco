@@ -9,6 +9,7 @@ Aliases
 * **paco-rm**: Remove the packages and all its dependencies. Equivalent to 'pacman -Rs'
 * **paco-rmdep**: Remove only the specified packages. Equivalent to 'pacman -Rdd'
 * **paco-autoremove**: Remove all orphan dependencies to free disk space. Equivalent to 'pacman -Rs $(pacman -Qqtd)'
+* **paco-make**: Compiles and install a github aur repository. Equivalent to 'makepkg -sri'
 
 
 Cool features
