@@ -46,7 +46,7 @@ alias paco-install='pacman_install'
 alias paco-rm='pacman_rm'
 alias paco-rmdep='pacman_rmdep'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
-alias paco-add-key='gpg_addkeys'
+alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
 
 
