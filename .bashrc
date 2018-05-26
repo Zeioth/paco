@@ -36,7 +36,7 @@ gpg_addkeys() {
   # For each parameter passed, add a new gpg key.
   for var in "$@"
   do
-    sudo gpg --recv-keys "$var"
+    gpg --recv-keys "$var"
   done
 }
 
