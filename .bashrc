@@ -24,6 +24,21 @@ pacman_rmdep() {
   done
 }
 
+pacman_rmdep() {
+  # For each parameter passed, remove only the specified dependency.
+  for var in "$@"
+  do
+    sudo pacman -Rdd "$var"
+  done
+}
+
+gpg_addkeys() {
+  # For each parameter passed, add a new gpg key.
+  for var in "$@"
+  do
+    sudo gpg --recv-keys "$var"
+  done
+}
 
 # Custom aliases
 #========================================================
@@ -31,6 +46,9 @@ alias paco-install='pacman_install'
 alias paco-rm='pacman_rm'
 alias paco-rmdep='pacman_rmdep'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
+alias paco-add-key='gpg_addkeys'
+alias paco-make='makepkg -sri'
+
 
 
 # Autocomplete
