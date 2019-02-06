@@ -49,8 +49,6 @@ alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
 
-
-
 # Autocomplete
 #========================================================
 # To delete autocomplete, run 'complete -r alias_name'
