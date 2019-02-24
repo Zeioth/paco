@@ -24,11 +24,6 @@ pacman_rmdeps() {
   done
 }
 
-pacman_autoremove() {
-  # Deletes unnecesary dependencies.
-  sudo pacman -Rns $(pacman -Qtdq)
-}
-
 gpg_addkeys() {
   # For each parameter passed, add a new gpg key.
   for var in "$@"
@@ -41,7 +36,7 @@ gpg_addkeys() {
 #========================================================
 alias paco-install='pacman_install'
 alias paco-rm='pacman_rm'
-alias paco-rmdep='pacman_rmdep'
+alias paco-rmdeps='pacman_rmdeps'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
@@ -51,4 +46,4 @@ alias paco-make='makepkg -sri'
 # To delete autocomplete, run 'complete -r alias_name'
 complete -c paco-install
 complete -c paco-rm
-complete -c paco-rmdep
+complete -c paco-rmdeps
