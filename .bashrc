@@ -40,6 +40,7 @@ alias paco-rmdeps='pacman_rmdeps'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
+alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
 
 # Autocomplete
 #========================================================
