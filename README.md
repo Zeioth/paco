@@ -12,7 +12,7 @@ Aliases
 * **paco-make**: Compile and install [a cloned github aur repository](https://www.youtube.com/watch?v=8Pv2TAXRw5o). Equivalent to 'makepkg -sri'
 * **paco-add-keys**: Mark the specified key as secure. Equivalent to 'gpg --recv-keys'
 * **paco-unlockdb**: Unlock pacman's db. Equivalent to 'sudo rm /var/lib/pacman/db.lck'
-* **paco-resolvedep**: Search and install a missing dependencies. Equivalent to 'pacman -Fsq'
+* **paco-resolvelibs**: Search and install a missing dependencies. Equivalent to 'pacman -Fsq'
 
 Cool features
 ---------------------
