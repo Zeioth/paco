@@ -32,6 +32,14 @@ gpg_addkeys() {
   done
 }
 
+pacman_resolvelibs() {
+  # For each parameter passed, search and install the dependency.
+  for var in "$@"
+  do
+    sudo pacman -Fsq "$var"
+  done
+}
+
 # Custom aliases
 #========================================================
 alias paco-install='pacman_install'
@@ -41,6 +49,7 @@ alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
 alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
+alias paco-resolvelib='pacman_resolvelibs'
 
 # Autocomplete
 #========================================================
