@@ -9,7 +9,7 @@ Aliases
 * **paco-rm**: Remove only the specified packages. Equivalent to 'pacman -Rdd'
 * **paco-rmdeps**: Remove the packages and all its dependencies. Equivalent to 'pacman -Rs'
 * **paco-autoremove**: Remove all orphan dependencies to free disk space. Equivalent to 'pacman -Rs $(pacman -Qqtd)'
-* **paco-make**: Compile and install a directory with a pkg file. Equivalent to 'makepkg -sri'
+* **paco-make**: Compile and install a directory with a PKGBUILD file. Equivalent to 'makepkg -sri'
 * **paco-add-keys**: Mark the specified key as secure. Equivalent to 'gpg --recv-keys'
 * **paco-unlockdb**: Unlock pacman's db. Equivalent to 'sudo rm /var/lib/pacman/db.lck'
 
