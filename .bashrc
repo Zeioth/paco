@@ -41,6 +41,7 @@ alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
 alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
+alias paco-kernel-hooks='sudo grub-mkconfig -o /boot/grub/grub.cfg && mkinitcpio -p'
 
 # Autocomplete
 #========================================================
