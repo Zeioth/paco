@@ -7,7 +7,7 @@ Aliases
 
 * **paco-install**: Install the packages and all its dependencies. Equivalent to 'pacman -S'
 * **paco-rm**: Remove only the specified packages. Equivalent to 'pacman -Rdd'
-* **paco-rmwdeps**: Remove the packages with all its dependencies. Equivalent to 'pacman -Rs'
+* **paco-rmw**: Remove the packages with all its dependencies. Equivalent to 'pacman -Rs'
 * **paco-autoremove**: Remove all orphan dependencies to free disk space. Equivalent to 'pacman -Rs $(pacman -Qqtd)'
 * **paco-make**: Compile and install a directory with a PKGBUILD file. Equivalent to 'makepkg -sri'
 * **paco-add-keys**: Mark the specified key as secure. Equivalent to 'gpg --recv-keys'
