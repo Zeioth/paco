@@ -13,6 +13,7 @@ Aliases
 * **paco-add-keys**: Mark the specified key as secure. Equivalent to 'gpg --recv-keys'
 * **paco-unlockdb**: Unlock pacman's db. Equivalent to 'sudo rm /var/lib/pacman/db.lck'
 * **paco-kernel-hooks**: Register all your kernels in GRUB + hook all kernels and drivers. Equivalent to 'sudo grub-mkconfig -o /boot/grub/grub.cfg && mkinitcpio -P'
+* **paco-update-mirrors**: Updates your mirrors with the best performing ones available. Equivalent to 'sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
 
 Cool features
 ---------------------
