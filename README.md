@@ -5,7 +5,7 @@ Copy the content of .bashrc at the end of your own ~/.bashrc
 Aliases
 ---------------------
 
-* **paco-install**: Install the packages and all its dependencies. Equivalent to 'pacman -S'
+* **paco-inst**: Install the packages and all its dependencies. Equivalent to 'pacman -S'
 * **paco-rm**: Remove only the specified packages. Equivalent to 'pacman -Rdd'
 * **paco-rmw**: Remove the packages with all its dependencies. Equivalent to 'pacman -Rs'
 * **paco-autoremove**: Remove all orphan dependencies to free disk space. Equivalent to 'pacman -Rs $(pacman -Qqtd)'
