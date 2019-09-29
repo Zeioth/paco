@@ -42,7 +42,7 @@ alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
 alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
 alias paco-kernel-hooks='sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo mkinitcpio -P'
-alias paco-mupdate-mirrors='alias paco-mupdate-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Syyu''
+alias paco-mupdate-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Syyu'
 alias paco-aupdate-mirrors='sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
 
 # Autocomplete
