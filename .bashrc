@@ -1,3 +1,4 @@
+# Custom methods
 #========================================================
 pacman_install() {
   # For each parameter passed, install the package and all its dependencies.
