@@ -44,6 +44,7 @@ alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
 alias paco-kernel-hooks='sudo mkinitcpio -P && sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias paco-update-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Sy' # Use this line for manjaro repos
 # alias paco-update-mirrors='sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist' # Use this line for pure arch repos
+alias paco-services-running='systemctl list-units  --type=service  --state=running'
 
 # Autocomplete
 #========================================================
