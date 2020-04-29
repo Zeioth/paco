@@ -14,6 +14,7 @@ Aliases
 * **paco-unlockdb**: Unlock pacman's db. Equivalent to 'sudo rm /var/lib/pacman/db.lck'
 * **paco-kernel-hooks**: Register all your kernels in GRUB + hook all kernels and drivers. Equivalent to 'sudo mkinitcpio -P && sudo grub-mkconfig -o /boot/grub/grub.cfg'
 * **paco-update-mirrors**: Updates your mirrors with the best performing ones available. Equivalent to 'sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Sy'
+* **paco-services-running**: List all running services. Equivalent to 'systemctl list-units  --type=service  --state=running'
 
 Cool features
 ---------------------
