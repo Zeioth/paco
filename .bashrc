@@ -2,8 +2,6 @@
 # ~/.bashrc
 #
 
-# Manjaro's boilerplate - Enable colors on terminal
-#========================================================
 [[ $- != *i* ]] && return
 
 colors() {
@@ -140,8 +138,9 @@ ex ()
   fi
 }
 
-
-
+# Env vars
+#========================================================
+export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 # Custom methods
 #========================================================
@@ -186,9 +185,9 @@ alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
 alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
-alias paco-kernel-hooks='sudo mkinitcpio -P && sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias paco-update-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Sy' # Use this line for manjaro repos
-# alias paco-update-mirrors='sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist' # Use this line for pure arch repos
+alias paco-kernel-hooks='sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo mkinitcpio -P'
+alias paco-mupdate-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Syyu'
+alias paco-aupdate-mirrors='sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
 alias paco-services-running='systemctl list-units  --type=service  --state=running'
 
 # Autocomplete
