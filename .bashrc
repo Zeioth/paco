@@ -17,6 +17,14 @@ pacman_install() {
   done
 }
 
+pacman_install_force() {
+  # For each parameter passed, install the package and all its dependencies overwriting files in conflict.
+  for var in "$@"
+  do
+    sudo pacman -S "$var" --overwrite '*'
+  done
+}
+
 pacman_rm() {
   # For each parameter passed, remove only the specified package.
   for var in "$@"
@@ -44,6 +52,7 @@ gpg_addkeys() {
 # Custom aliases
 #========================================================
 alias paco-install='pacman_install'
+alias paco-install-force='pacman_install_force'
 alias paco-rm='pacman_rm'
 alias paco-rmwdeps='pacman_rmwdeps'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
