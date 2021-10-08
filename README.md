@@ -15,6 +15,7 @@ Aliases
 * **paco-grub-update**: Regenerates intramfs, and update GRUB. Equivalent to 'sudo mkinitcpio -P && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo update-grub'
 * **paco-update-mirrors**: Updates your mirrors with the best performing ones available. Equivalent to 'sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Sy'
 * **paco-services-running**: List all running services. Equivalent to 'systemctl list-units  --type=service  --state=running'
+* **paco-fix-zhistory**: Run the commands necessary to auto-repair the history file.
 
 Cool features
 ---------------------
