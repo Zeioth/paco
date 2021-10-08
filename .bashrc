@@ -6,6 +6,7 @@
 # Env vars
 #========================================================
 export LIBVIRT_DEFAULT_URI="qemu:///system"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Custom methods
 #========================================================
@@ -49,6 +50,27 @@ gpg_addkeys() {
   done
 }
 
+fix_zhistory() {
+  cd ~
+  mv .zhistory .zhistory-corrupt
+  strings -eS .zhistory-corrupt > .zhistory
+  fc -R .zhistory
+}
+
+set_working_dir() {
+  # All terminals after this command, will be opened in the current directory.
+  # Or the one you specify.
+  for var in "$@"
+  do
+    echo "$var" > ~/.cache/.last_dir 
+  done
+	if [ $# -eq 0 ]
+  then
+    pwd > ~/.cache/.last_dir
+	fi
+  echo '> Working directory saved.'
+}
+
 # Custom aliases
 #========================================================
 alias paco-install='pacman_install'
@@ -58,10 +80,19 @@ alias paco-rmwdeps='pacman_rmwdeps'
 alias paco-autoremove='sudo pacman -Rs $(pacman -Qqtd)'
 alias paco-add-keys='gpg_addkeys'
 alias paco-make='makepkg -sri'
+alias paco-make-srcinfo='makepkg --printsrcinfo > ./.SRCINFO'
 alias paco-unlockdb='sudo rm /var/lib/pacman/db.lck'
 alias paco-grub-update='sudo mkinitcpio -P && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo update-grub'
-alias paco-update-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Syyu'
+alias paco-update-mirrors='sudo pacman-mirrors --country all --api --protocols all --set-branch testing && sudo pacman -Syy'
 alias paco-services-running='systemctl list-units  --type=service  --state=running'
+alias paco-fix-zhistory='fix_zhistory'
+alias swd='set_working_dir'
+alias gh=cd ~/
+alias f='cd $(fd --type f --hidden --exclude .git --exclude node_modules --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .thunderbird --exclude .cargo | fzf)'
+alias d='cd $(fd --type d --hidden --exclude .git --exclude node_modules --exclude .cache --exclude .npm --exclude .mozilla --exclude .meteor --exclude .nv --exclude .thunderbird --exclude .cargo | fzf)'
+alias x=$TERMINAL
+alias e=exit
+
 
 # Autocomplete
 #========================================================
